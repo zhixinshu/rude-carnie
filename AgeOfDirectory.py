@@ -155,7 +155,7 @@ def main(argv=None):  # pylint: disable=unused-argument
 
             for f in files:
                 image_file = resolve_file(f)
-            
+                print(image_file)
                 if image_file is None: continue
 
                 try:
