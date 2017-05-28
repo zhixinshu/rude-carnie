@@ -156,9 +156,8 @@ def main(argv=None):  # pylint: disable=unused-argument
                 writer.writerow(('file', 'label', 'score'))
 
             for root, dirs, files in os.walk(FLAGS.imgDir):
-                print(files)
                 for f in files:
-                    image_file = resolve_file(f)
+                    image_file = resolve_file(os.path.join(FLAGS.imgDir, f))
                     print(image_file)
                     if image_file is None: continue
 
