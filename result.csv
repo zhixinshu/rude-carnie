@@ -1,11 +1,11 @@
 file,label,score
-/nfs/bigdisk/zhshu/Github/reference/rude-carnie/data/1.jpg,"(8, 12)",1.00
-/nfs/bigdisk/zhshu/Github/reference/rude-carnie/data/2.jpg,"(4, 6)",0.98
-/nfs/bigdisk/zhshu/Github/reference/rude-carnie/data/3.jpg,"(8, 12)",0.98
-/nfs/bigdisk/zhshu/Github/reference/rude-carnie/data/4.jpg,"(25, 32)",0.98
-/nfs/bigdisk/zhshu/Github/reference/rude-carnie/data/5.jpg,"(25, 32)",0.98
-/nfs/bigdisk/zhshu/Github/reference/rude-carnie/data/6.jpg,"(25, 32)",1.00
-/nfs/bigdisk/zhshu/Github/reference/rude-carnie/data/7.jpg,"(38, 43)",0.69
-/nfs/bigdisk/zhshu/Github/reference/rude-carnie/data/8.jpg,"(38, 43)",0.76
-/nfs/bigdisk/zhshu/Github/reference/rude-carnie/data/9.jpg,"(25, 32)",1.00
-/nfs/bigdisk/zhshu/Github/reference/rude-carnie/data/0.jpg,"(25, 32)",1.00
+9.jpg,"(25, 32)",1.00
+8.jpg,"(38, 43)",0.76
+7.jpg,"(38, 43)",0.69
+6.jpg,"(25, 32)",1.00
+5.jpg,"(25, 32)",0.98
+4.jpg,"(25, 32)",0.98
+3.jpg,"(8, 12)",0.98
+2.jpg,"(4, 6)",0.98
+1.jpg,"(8, 12)",1.00
+0.jpg,"(25, 32)",1.00
