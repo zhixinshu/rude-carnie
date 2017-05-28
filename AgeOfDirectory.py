@@ -32,6 +32,9 @@ tf.app.flags.DEFINE_string('device_id', '/cpu:0',
 tf.app.flags.DEFINE_string('filename', '',
                            'File (Image) or File list (Text/No header TSV) to process')
 
+tf.app.flags.DEFINE_string('imgDir', '',
+                           'the directory of images')
+
 tf.app.flags.DEFINE_string('target', 'result.csv',
                            'CSV file containing the filename processed along with best guess and score')
 
@@ -152,19 +155,20 @@ def main(argv=None):  # pylint: disable=unused-argument
                 writer = csv.writer(output)
                 writer.writerow(('file', 'label', 'score'))
 
+            for root, dirs, files in os.walk(FLAGS.imgDir):
+                print(files)
+                for f in files:
+                    image_file = resolve_file(f)
+                    print(image_file)
+                    if image_file is None: continue
 
-            for f in files:
-                image_file = resolve_file(f)
-                print(image_file)
-                if image_file is None: continue
-
-                try:
-                    best_choice = classify(sess, label_list, softmax_output, coder, images, image_file)
-                    if writer is not None:
-                        writer.writerow((f, best_choice[0], '%.2f' % best_choice[1]))
-                except Exception as e:
-                    print(e)
-                    print('Failed to run image %s ' % image_file)
+                    try:
+                        best_choice = classify(sess, label_list, softmax_output, coder, images, image_file)
+                        if writer is not None:
+                            writer.writerow((f, best_choice[0], '%.2f' % best_choice[1]))
+                    except Exception as e:
+                        print(e)
+                        print('Failed to run image %s ' % image_file)
 
             if output is not None:
                 output.close()
