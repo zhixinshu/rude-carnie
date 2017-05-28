@@ -43,7 +43,7 @@ tf.app.flags.DEFINE_string('model_type', 'default',
 
 tf.app.flags.DEFINE_string('requested_step', '', 'Within the model directory, a requested step to restore e.g., 9000')
 
-tf.app.flags.DEFINE_boolean('single_look', False, 'single look at the image or multiple crops')
+tf.app.flags.DEFINE_boolean('single_look', True, 'single look at the image or multiple crops')
 
 tf.app.flags.DEFINE_string('face_detection_model', '', 'Do frontal face detection with model specified')
 
