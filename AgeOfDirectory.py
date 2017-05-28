@@ -32,7 +32,7 @@ tf.app.flags.DEFINE_string('device_id', '/cpu:0',
 tf.app.flags.DEFINE_string('filename', '',
                            'File (Image) or File list (Text/No header TSV) to process')
 
-tf.app.flags.DEFINE_string('target', '',
+tf.app.flags.DEFINE_string('target', 'result.csv',
                            'CSV file containing the filename processed along with best guess and score')
 
 tf.app.flags.DEFINE_string('checkpoint', 'checkpoint',
